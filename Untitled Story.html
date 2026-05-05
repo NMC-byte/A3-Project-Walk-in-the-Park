@@ -30,15 +30,56 @@ tw-link:focus, tw-link:hover, tw-link:active, tw-link.visited:hover {
   text-decoration: none;
 }
 tw-passage {
-  padding-bottom: 200px;}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Untitled Passage" tags="" position="525,325" size="100,100">testpassage</tw-passagedata><tw-passagedata pid="2" name="sect2" tags="" position="700,325" size="100,100">This is my line of dialogue. (click-append:&quot;This is my line of dialogue.&quot;) [
+  padding-bottom: 200px;}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Titlemain" tags="" position="500,300" size="100,100">&lt;div style=&quot;text-align:center; margin-top:200px;&quot;&gt;
+
+# A Walk in the Park
+
+# I&#39;m feeling (cycling-link: bind $mood, &quot;Fine&quot;, &quot;Sad&quot;) 
+
+(if: $mood is &quot;Fine&quot;)[
+(link: &quot;Let&#39;s go&quot;)[ (goto: &quot;sect2&quot;) ]
+]
+
+(if: $mood is &quot;Sad&quot;)[
+(link: &quot;Go on&quot;)[ (goto: &quot;sect2&quot;) ]
+]
+
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="2" name="sect2" tags="" position="700,300" size="100,100">&lt;div style=&quot;text-align:center;&quot;&gt;
+
+(if: $mood is &quot;Fine&quot;)[(text-colour: green)[You feel fine.]] (if: $mood is &quot;Sad&quot;)[(text-colour: red)[You feel sad.]]
+
+(link: &quot;Continue&quot;)[ (goto: &quot;sect3&quot;) ]
+</tw-passagedata><tw-passagedata pid="3" name="sect3" tags="" position="900,300" size="100,100">(if: $mood is &quot;Fine&quot;)[Fine Dialogue 1] (click-append:&quot;Fine Dialogue 1&quot;) [
+
+Fine Dialogue 2] (click-append:&quot;Fine Dialogue 2&quot;) [
+
+Fine Dialogue 3] (click-append:&quot;Fine Dialogue 3&quot;)[
+
+Final Fine 4] (click-append:&quot;Final Fine 4&quot;) [
+
+(link: &quot;Let&#39;s go&quot;)[ (goto: &quot;sect4&quot;) ]
+]
+
+(if: $mood is &quot;Sad&quot;)[Sad Dialogue 1] (click-append:&quot;Sad Dialogue 1&quot;) [
+
+Sad Dialogue 2] (click-append:&quot;Sad Dialogue 2&quot;) [
+
+Sad Dialogue 3] (click-append:&quot;Sad Dialogue 3&quot;)[
+
+Final Sad 4] (click-append:&quot;Final Sad 4&quot;) [
+
+(link: &quot;Let&#39;s go&quot;)[ (goto: &quot;Sad01&quot;) ]
+]</tw-passagedata><tw-passagedata pid="4" name="Untitled Passage" tags="" position="400,100" size="100,100">This is my line of dialogue. (click-append:&quot;This is my line of dialogue.&quot;) [
 
 This is the new line that appears after clicking.] (click-append:&quot;This is the new line that appears after clicking.&quot;) [
 
 This is another line.] (click-append:&quot;This is another line.&quot;)[
 
-This is yet another line.]
+This is yet another line.]</tw-passagedata><tw-passagedata pid="5" name="Fine01" tags="" position="1100,200" size="100,100">&lt;div style=&quot;text-align:center;&quot;&gt;
 
-&lt;img class=&quot;background, skool&quot; src=&quot;./images/background, skool.png&quot; alt=&quot;an example&quot; /&gt;</tw-passagedata></tw-storydata>
+# You are here.
+
+&lt;img class=&quot;story-image&quot; src=&quot;./images/park01fine.png&quot; alt=&quot;an example&quot; /&gt;</tw-passagedata><tw-passagedata pid="6" name="Sad01" tags="" position="1100,400" size="100,100"></tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
