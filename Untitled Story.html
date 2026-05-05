@@ -30,11 +30,95 @@ tw-link:focus, tw-link:hover, tw-link:active, tw-link.visited:hover {
   text-decoration: none;
 }
 tw-passage {
-  padding-bottom: 200px;}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Titlemain" tags="" position="500,300" size="100,100">&lt;div style=&quot;text-align:center; margin-top:200px;&quot;&gt;
+  padding-bottom: 200px;}
+
+/* Fine01 */
+
+.scene {
+    position: relative;
+    text-align: center;
+}
+
+/* background image */
+.bg {
+    width: 100%;
+    display: block;
+}
+
+/* button overlay */
+.button {
+    position: absolute;
+    top: 50%;      /* adjust positioning */
+    left: 45%;
+  	Width: 17%;
+  	height: 17%;
+    transform: translate(-50%, -50%);
+}
+
+/* optional hover effect */
+.button img {
+    transition: 0.2s;
+}
+
+.button img:hover {
+    filter: brightness(1.3);
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+/* StairsFine01 */
+
+.scene {
+    position: relative;
+}
+
+.stair02 {
+    position: absolute;
+    top: 80px;
+    left: 80px;
+}
+
+.typewriter {
+    margin-top: 100px;
+}
+
+/* Park01 */
+
+.scene {
+    position: relative;
+    text-align: center;
+}
+
+/* background image */
+.bg {
+    width: 100%;
+    display: block;
+}
+
+/* button overlay */
+.buttontree01 {
+    position: absolute;
+    top: 35%;      /* adjust positioning */
+    left: 11%;
+  	Width: 25%;
+  	height: 25%;
+    transform: translate(-50%, -50%);
+}
+
+/* optional hover effect */
+.buttontree01 img {
+    transition: 0.2s;
+}
+
+.buttontree01 img:hover {
+    filter: brightness(1.3);
+    transform: scale(1.05);
+    cursor: pointer;
+}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Titlemain" tags="" position="500,300" size="100,100">&lt;div style=&quot;text-align:center; margin-top:200px;&quot;&gt;
 
 # A Walk in the Park
 
-# I&#39;m feeling (cycling-link: bind $mood, &quot;Fine&quot;, &quot;Sad&quot;) 
+# You&#39;re feeling (cycling-link: bind $mood, &quot;Fine&quot;, &quot;Sad&quot;) 
 
 (if: $mood is &quot;Fine&quot;)[
 (link: &quot;Let&#39;s go&quot;)[ (goto: &quot;sect2&quot;) ]
@@ -75,9 +159,9 @@ This is the new line that appears after clicking.] (click-append:&quot;This is t
 
 This is another line.] (click-append:&quot;This is another line.&quot;)[
 
-This is yet another line.]</tw-passagedata><tw-passagedata pid="5" name="Fine01" tags="" position="1100,200" size="100,100">&lt;div style=&quot;text-align:center;&quot;&gt;
+This is yet another line.]
 
-# You are here.
+
 
 &lt;img class=&quot;story-image&quot; src=&quot;./images/park01fine.png&quot; alt=&quot;an example&quot; /&gt;|stairs&gt;[
 &lt;img class=&quot;story-image&quot; src=&quot;./images/Stairstransparent.png&quot; /&gt;
@@ -87,8 +171,94 @@ This is yet another line.]</tw-passagedata><tw-passagedata pid="5" name="Fine01"
 (goto: &quot;Stairsfine01&quot;)
 ]
 
+
+&lt;img class=&quot;story-image stair02&quot; src=&quot;./images/Stairs02.png&quot; alt=&quot;button&quot; /&gt;
+
+&lt;div class=&quot;scene&quot;&gt;
+
+&lt;img class=&quot;story-image stair02&quot; src=&quot;./images/Stairs02.png&quot; alt=&quot;button&quot; /&gt;
+
+&lt;div class=&quot;typewriter&quot;&gt;
+(set: $typewriterText to &quot;This will appear like it&#39;s being typed.&quot;)
+(set: $charIndex to 0)
+(set: $typewriterSpeed to 0.3)
+
+(live: $typewriterSpeed)[
+  (if: $charIndex &lt; $typewriterText&#39;s length)[
+    (set: $charIndex to $charIndex + 1)
+    (print: (substring: $typewriterText, 1, $charIndex))
+    (if: $charIndex is $typewriterText&#39;s length)[
+      (stop:)
+    ]
+  ]
+]
+
 &lt;/div&gt;
-</tw-passagedata><tw-passagedata pid="6" name="Sad01" tags="" position="1100,400" size="100,100"></tw-passagedata><tw-passagedata pid="7" name="Stairsfine01" tags="" position="1300,200" size="100,100">testhereif</tw-passagedata></tw-storydata>
+&lt;/div&gt;
+
+.stair02 {
+    width: 50%;   /* resize here */
+    height: auto;   /* keeps proportions */
+}
+
+.stair02 {
+    position: absolute;
+    top: 50%;
+    left: 75%;
+}</tw-passagedata><tw-passagedata pid="5" name="Fine01" tags="" position="1100,200" size="100,100">&lt;div style=&quot;text-align:center;&quot;&gt;
+
+# You are here.
+
+&lt;div class=&quot;scene&quot;&gt;
+
+&lt;img class=&quot;story-image bg&quot; src=&quot;./images/park01fine.png&quot; alt=&quot;background&quot; /&gt;
+
+&lt;div class=&quot;button&quot;&gt;
+|stairs&gt;[
+&lt;img class=&quot;story-image&quot; src=&quot;./images/Stairsbutton.png&quot; alt=&quot;button&quot; /&gt;
+]
+(click: ?stairs)[
+(goto: &quot;Stairsfine01&quot;)
+]
+&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="6" name="Sad01" tags="" position="1100,400" size="100,100"></tw-passagedata><tw-passagedata pid="7" name="Stairsfine01" tags="" position="1300,200" size="100,100">&lt;img class=&quot;story-image stair02&quot; src=&quot;./images/Stairs02.png&quot; alt=&quot;button&quot; /&gt;
+
+&lt;div class=&quot;typewriter&quot;&gt;
+(set: $typewriterText to &quot;You feel fine. You can climb these stairs...&quot;)
+(set: $charIndex to 0)
+(set: $typewriterSpeed to 0.11)
+
+(live: $typewriterSpeed)[
+  (if: $charIndex &lt; $typewriterText&#39;s length)[
+    (set: $charIndex to $charIndex + 1)
+    (print: (substring: $typewriterText, 1, $charIndex))
+    (if: $charIndex is $typewriterText&#39;s length)[
+      (stop:)
+    ]
+  ]
+]
+
+(link: &quot;Climb&quot;)[ (goto: &quot;Park01&quot;) ]
+
+(link: &quot;Leave&quot;)[ (goto: &quot;Leavefine&quot;) ]
+
+&lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="8" name="Park01" tags="" position="1500,200" size="100,100">&lt;div style=&quot;text-align:center;&quot;&gt;
+
+# Park01.
+
+&lt;div class=&quot;scene&quot;&gt;
+
+&lt;img class=&quot;story-image bg&quot; src=&quot;./images/Park02.png&quot; alt=&quot;background&quot; /&gt;
+
+&lt;div class=&quot;buttontree01&quot;&gt;
+|tree01&gt;[
+&lt;img class=&quot;story-image&quot; src=&quot;./images/Tree01.png&quot; alt=&quot;button&quot; /&gt;
+]
+(click: ?tree01)[
+(goto: &quot;Stairsfine01&quot;)
+]
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="9" name="Leavefine" tags="" position="1300,0" size="100,100">#Maybe you aren&#39;t fine afterall</tw-passagedata><tw-passagedata pid="10" name="Untitled Passage 1" tags="" position="1700,200" size="100,100"></tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
