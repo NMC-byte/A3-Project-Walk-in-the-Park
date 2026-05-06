@@ -9,10 +9,10 @@
 </head>
 <body>
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play Untitled Story.</tw-noscript></noscript></tw-story>
-<tw-storydata name="Untitled Story" startnode="1" creator="Twine" creator-version="2.12.0" format="Harlowe" format-version="3.3.9" ifid="9DF95138-90F7-4204-BFBD-503F62BDF87B" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+<tw-storydata name="Untitled Story" startnode="1" creator="Twine" creator-version="2.12.0" format="Harlowe" format-version="3.3.9" ifid="9DF95138-90F7-4204-BFBD-503F62BDF87B" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 tw-story {
-  font-family: 'Homemade Apple', cursive;
+  font-family: 'Roboto', cursive;
   color: #FFF;
   background-color: #000;
 }
@@ -114,7 +114,15 @@ tw-passage {
     filter: brightness(1.3);
     transform: scale(1.05);
     cursor: pointer;
-}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Titlemain" tags="" position="400,500" size="100,100">&lt;div style=&quot;text-align:center; margin-top:200px;&quot;&gt;
+}
+
+/* Tree01 */
+.Tree01 {
+    position: absolute;
+    top: 20%;      /* adjust positioning */
+    left: 70%;
+  	Width: 50%;
+  	height: auto;</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Titlemain" tags="" position="400,500" size="100,100">&lt;div style=&quot;text-align:center; margin-top:200px;&quot;&gt;
 
 # A Walk in the Park
 
@@ -277,7 +285,7 @@ This is yet another line.]
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="9" name="Leavefine" tags="" position="1200,200" size="100,100">#Maybe you aren&#39;t okay afterall</tw-passagedata><tw-passagedata pid="10" name="Treeprop01" tags="" position="1400,200" size="100,100">&lt;img class=&quot;story-image Tree01&quot; src=&quot;./images/Tree01.png&quot; alt=&quot;button&quot; /&gt;
 
 &lt;div class=&quot;typewriter&quot;&gt;
-(set: $typewriterText to &quot;You feel fine. You can climb these stairs...&quot;)
+(set: $typewriterText to &quot;There&#39;s a tree here. Like any other tree...&quot;)
 (set: $charIndex to 0)
 (set: $typewriterSpeed to 0.11)
 
@@ -291,9 +299,9 @@ This is yet another line.]
   ]
 ]
 
-(link: &quot;Climb&quot;)[ (goto: &quot;Park01&quot;) ]
+(link: &quot;Inspect&quot;)[ (goto: &quot;Park01&quot;) ]
 
-(link: &quot;Leave&quot;)[ (goto: &quot;Leavefine&quot;) ]
+(link: &quot;Leave&quot;)[ (goto: &quot;Park01&quot;) ]
 
 &lt;/div&gt;
 &lt;/div&gt;</tw-passagedata></tw-storydata>
