@@ -285,7 +285,7 @@ This is yet another line.]
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="9" name="Leavefine" tags="" position="1200,200" size="100,100">#Maybe you aren&#39;t okay afterall</tw-passagedata><tw-passagedata pid="10" name="Treeprop01" tags="" position="1400,200" size="100,100">&lt;img class=&quot;story-image Tree01&quot; src=&quot;./images/Tree01.png&quot; alt=&quot;button&quot; /&gt;
 
 &lt;div class=&quot;typewriter&quot;&gt;
-(set: $typewriterText to &quot;There&#39;s a tree here. Like any other tree...&quot;)
+(set: $typewriterText to &quot;Insert text&quot;)
 (set: $charIndex to 0)
 (set: $typewriterSpeed to 0.11)
 
@@ -299,11 +299,44 @@ This is yet another line.]
   ]
 ]
 
-(link: &quot;Inspect&quot;)[ (goto: &quot;Park01&quot;) ]
-
-(link: &quot;Leave&quot;)[ (goto: &quot;Park01&quot;) ]
+(link: &quot;Inspect&quot;)[ (goto: &quot;asset10&quot;) ]
 
 &lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="11" name="10prop" tags="" position="1600,250" size="100,100">&lt;img class=&quot;story-image Tree01&quot; src=&quot;./images/Tree01.png&quot; alt=&quot;button&quot; /&gt;
+
+&lt;div class=&quot;typewriter&quot;&gt;
+(set: $typewriterText to &quot;Insert text&quot;)
+(set: $charIndex to 0)
+(set: $typewriterSpeed to 0.11)
+
+(live: $typewriterSpeed)[
+  (if: $charIndex &lt; $typewriterText&#39;s length)[
+    (set: $charIndex to $charIndex + 1)
+    (print: (substring: $typewriterText, 1, $charIndex))
+    (if: $charIndex is $typewriterText&#39;s length)[
+      (stop:)
+    ]
+  ]
+]
+
+(link: &quot;Inspect&quot;)[ (goto: &quot;asset10&quot;) ]
+
+&lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="12" name="asset10t" tags="" position="1600,400" size="100,100">&lt;div style=&quot;text-align:center;&quot;&gt;
+
+# Park01.
+
+&lt;div class=&quot;scene&quot;&gt;
+
+&lt;img class=&quot;story-image bg&quot; src=&quot;./images/asset10land.png&quot; alt=&quot;background&quot; /&gt;
+
+&lt;div class=&quot;buttontree01&quot;&gt;
+|tree01&gt;[
+&lt;img class=&quot;story-image&quot; src=&quot;./images/asset10obj.png&quot; alt=&quot;button&quot; /&gt;
+]
+(click: ?asset10obj)[
+(goto: &quot;10prop&quot;)
+]
 &lt;/div&gt;</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
