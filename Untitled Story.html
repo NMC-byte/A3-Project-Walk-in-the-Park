@@ -121,41 +121,42 @@ tw-passage {
 
 # A Walk in the Park
 
-# You&#39;re feeling (cycling-link: bind $mood, &quot;Fine&quot;, &quot;Sad&quot;) 
+# You&#39;re an Imposter
 
-(if: $mood is &quot;Fine&quot;)[
 (link: &quot;Let&#39;s go&quot;)[ (goto: &quot;sect2&quot;) ]
-]
 
-(if: $mood is &quot;Sad&quot;)[
-(link: &quot;Go on&quot;)[ (goto: &quot;sect2&quot;) ]
-]
+
 
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="2" name="sect2" tags="" position="600,500" size="100,100">&lt;div style=&quot;text-align:center;&quot;&gt;
 
-(if: $mood is &quot;Fine&quot;)[(text-colour: green)[You feel fine.]] (if: $mood is &quot;Sad&quot;)[(text-colour: red)[You feel sad.]]
+(if: $mood is &quot;Fine&quot;)[(text-colour: green)[Who are you?]] 
 
 (link: &quot;Continue&quot;)[ (goto: &quot;sect3&quot;) ]
-</tw-passagedata><tw-passagedata pid="3" name="sect3" tags="" position="800,500" size="100,100">(if: $mood is &quot;Fine&quot;)[Fine Dialogue 1] (click-append:&quot;Fine Dialogue 1&quot;) [
+</tw-passagedata><tw-passagedata pid="3" name="sect3" tags="" position="800,500" size="100,100">An Imposter
 
-Fine Dialogue 2] (click-append:&quot;Fine Dialogue 2&quot;) [
+(click-append: &quot;Imposter&quot;)[
 
-Fine Dialogue 3] (click-append:&quot;Fine Dialogue 3&quot;)[
-
-Final Fine 4] (click-append:&quot;Final Fine 4&quot;) [
-
-(link: &quot;Let&#39;s go&quot;)[ (goto: &quot;Fine01&quot;) ]
+A person who doesn’t belong.
 ]
 
-(if: $mood is &quot;Sad&quot;)[Sad Dialogue 1] (click-append:&quot;Sad Dialogue 1&quot;) [
+(click-append: &quot;belong.&quot;)[
 
-Sad Dialogue 2] (click-append:&quot;Sad Dialogue 2&quot;) [
+You will deceive yourself into thinking you are capable.
+]
 
-Sad Dialogue 3] (click-append:&quot;Sad Dialogue 3&quot;)[
+(click-append: &quot;capable.&quot;)[
 
-Final Sad 4] (click-append:&quot;Final Sad 4&quot;) [
+You will come to doubt yourself more with each setback.
+]
 
-(link: &quot;Let&#39;s go&quot;)[ (goto: &quot;Sad01&quot;) ]
+(click-append: &quot;setback.&quot;)[
+
+and it’ll numb.
+]
+
+(click-append: &quot;numb.&quot;)[
+
+(link: &quot;That&#39;s me&quot;)[(goto: &quot;Fine01&quot;)]
 ]</tw-passagedata><tw-passagedata pid="4" name="Backup" tags="" position="100,700" size="100,100">This is my line of dialogue. (click-append:&quot;This is my line of dialogue.&quot;) [
 
 This is the new line that appears after clicking.] (click-append:&quot;This is the new line that appears after clicking.&quot;) [
@@ -264,8 +265,6 @@ This is yet another line.]
 &lt;/div&gt;
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="8" name="Park01" tags="" position="1400,400" size="100,100">&lt;div style=&quot;text-align:center;&quot;&gt;
 
-# Park01.
-
 &lt;div class=&quot;scene&quot;&gt;
 
 &lt;img class=&quot;bg&quot; src=&quot;./images/Park02.png&quot; alt=&quot;background&quot; /&gt;
@@ -280,7 +279,8 @@ This is yet another line.]
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="9" name="Leavefine" tags="" position="1200,200" size="100,100">#Maybe you aren&#39;t okay afterall</tw-passagedata><tw-passagedata pid="10" name="Treeprop01" tags="" position="1400,200" size="100,100">&lt;img class=&quot;story-image Tree01&quot; src=&quot;./images/Tree01.png&quot; alt=&quot;button&quot; /&gt;
 
 &lt;div class=&quot;typewriter&quot;&gt;
-(set: $typewriterText to &quot;Insert text&quot;)
+(set: $typewriterText to &quot;You’ll become an imposter. 
+A cracked mirror of what you were. You’ll come to learn why you feel out of place, why you’ll come to feel the way you do. It’s called imposter syndrome. You can try to rationalize it, understand it, or bury it. You have done all that, but still it lingers, and it’ll come to envelop you.&quot;)
 (set: $charIndex to 0)
 (set: $typewriterSpeed to 0.11)
 
@@ -294,13 +294,16 @@ This is yet another line.]
   ]
 ]
 
-(link: &quot;Inspect&quot;)[ (goto: &quot;asset10&quot;) ]
+(link: &quot;Inspect the tree bark&quot;)[ (goto: &quot;asset10&quot;) ]
 
 &lt;/div&gt;
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="11" name="10prop" tags="" position="1725,200" size="100,100">&lt;img class=&quot;story-image ob10jB&quot; src=&quot;./images/asset10obj.png&quot; alt=&quot;button&quot; /&gt;
 
 &lt;div class=&quot;typewriter&quot;&gt;
-(set: $typewriterText to &quot;Insert text&quot;)
+(set: $typewriterText to &quot;You’ll begin to fear each assignment, worry about each written word, and dread what feedback the teacher will give.
+
+You’ll become numb to it.
+&quot;)
 (set: $charIndex to 0)
 (set: $typewriterSpeed to 0.11)
 
@@ -314,7 +317,7 @@ This is yet another line.]
   ]
 ]
 
-(link: &quot;Inspect&quot;)[ (goto: &quot;asset3&quot;) ]
+(link: &quot;Sit on the bench&quot;)[ (goto: &quot;asset3&quot;) ]
 
 &lt;/div&gt;
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="12" name="asset10" tags="" position="1600,200" size="100,100">&lt;div style=&quot;text-align:center;&quot;&gt;
@@ -348,7 +351,8 @@ This is yet another line.]
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="14" name="3prop" tags="" position="1975,200" size="100,100">&lt;img class=&quot;story-image obj3&quot; src=&quot;./images/asset3obj.png&quot; alt=&quot;button&quot; /&gt;
 
 &lt;div class=&quot;typewriter&quot;&gt;
-(set: $typewriterText to &quot;Insert text&quot;)
+(set: $typewriterText to &quot;You’ll try to participate in class discussions, speak up, stutter, and feel like a fool for trying.
+Whenever you speak, classmates will look at you in confusion or disdain, as if you were a pretender mimicking their language. This feeling will overwhelm you, and you’ll learn not to speak up.&quot;)
 (set: $charIndex to 0)
 (set: $typewriterSpeed to 0.11)
 
@@ -362,7 +366,7 @@ This is yet another line.]
   ]
 ]
 
-(link: &quot;Inspect&quot;)[ (goto: &quot;asset5&quot;) ]
+(link: &quot;Greet them&quot;)[ (goto: &quot;asset5&quot;) ]
 
 &lt;/div&gt;
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="15" name="asset5" tags="" position="2100,200" size="100,100">&lt;div style=&quot;text-align:center;&quot;&gt;
@@ -380,7 +384,8 @@ This is yet another line.]
 ]
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="16" name="5prop" tags="" position="2225,200" size="100,100">
 &lt;div class=&quot;typewriter&quot;&gt;
-(set: $typewriterText to &quot;Insert text&quot;)
+(set: $typewriterText to &quot;You should’ve been smarter and performed better in high school. All the other Asian students are studying science, technology, engineering, and math. What’s your place in creative writing? Why wouldn’t you try to follow your troupe? What were you thinking?
+ &quot;)
 (set: $charIndex to 0)
 (set: $typewriterSpeed to 0.11)
 
@@ -394,7 +399,7 @@ This is yet another line.]
   ]
 ]
 
-(link: &quot;Inspect&quot;)[ (goto: &quot;asset6&quot;) ]
+(link: &quot;You&#39;re no caretaker&quot;)[ (goto: &quot;asset6&quot;) ]
 
 &lt;/div&gt;
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="17" name="asset6" tags="" position="2350,200" size="100,100">&lt;div style=&quot;text-align:center;&quot;&gt;
@@ -413,7 +418,7 @@ This is yet another line.]
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="18" name="6prop" tags="" position="2475,200" size="100,100">&lt;img class=&quot;story-image obj6&quot; src=&quot;./images/asset6obj.png&quot; alt=&quot;button&quot; /&gt;
 
 &lt;div class=&quot;typewriter&quot;&gt;
-(set: $typewriterText to &quot;Insert text&quot;)
+(set: $typewriterText to &quot;You’ll come to develop a trait of perfectionism. Not just a perfectionist, however, but a neurotic perfectionist. No matter the work you do, the type of writing, or the idea you have, it won’t be good enough. You’ll try to chase that same momentum you had, but you’ll never reach it. &quot;)
 (set: $charIndex to 0)
 (set: $typewriterSpeed to 0.11)
 
@@ -427,7 +432,7 @@ This is yet another line.]
   ]
 ]
 
-(link: &quot;Inspect&quot;)[ (goto: &quot;asset8&quot;) ]
+(link: &quot;Read the plaque&quot;)[ (goto: &quot;asset8&quot;) ]
 
 &lt;/div&gt;
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="19" name="asset8" tags="" position="2600,200" size="100,100">&lt;div style=&quot;text-align:center;&quot;&gt;
@@ -436,9 +441,9 @@ This is yet another line.]
 
 &lt;img class=&quot;story-image bg&quot; src=&quot;./images/asset8land.png&quot; alt=&quot;background&quot; /&gt;
 
-&lt;div class=&quot;buttoneffect&quot;&gt;
+&lt;div class=&quot;hotspot&quot; style=&quot;top: 49%; left: 48%;&quot;&gt;
 |8obj&gt;[
-&lt;img class=&quot;story-image&quot; src=&quot;./images/asset8obj.png&quot; alt=&quot;button&quot; /&gt;
+&lt;img class=&quot;story-image&quot; src=&quot;./images/asset8obj.png&quot; style=&quot;width: 90%; alt=&quot;button&quot; /&gt;
 ]
 (click: ?8obj)[
 (goto: &quot;8prop&quot;)
@@ -446,7 +451,8 @@ This is yet another line.]
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="20" name="8prop" tags="" position="2725,200" size="100,100">&lt;img class=&quot;story-image Tree01&quot; src=&quot;./images/asset8obj.png&quot; alt=&quot;button&quot; /&gt;
 
 &lt;div class=&quot;typewriter&quot;&gt;
-(set: $typewriterText to &quot;Insert text&quot;)
+(set: $typewriterText to &quot;Now you’ll just have to survive. You’ll still try, your need for perfection eventually changing into an obsession. You’ll become anxious, fearing each task, each submission, and each assignment. You’ll question yourself, doubts mounting and fears spreading, before your own self-esteem comes to be hollowed out. I’m sorry to say this, but you will become depressed. You’ll talk to a counsellor, your friends, and your sister, and you’ll feel relief and optimism afterward, for a short moment. You’ll end up back in that hollow place all the same, you rely on distractions now.
+&quot;)
 (set: $charIndex to 0)
 (set: $typewriterSpeed to 0.11)
 
@@ -460,7 +466,7 @@ This is yet another line.]
   ]
 ]
 
-(link: &quot;Inspect&quot;)[ (goto: &quot;asset11&quot;) ]
+(link: &quot;Touch&quot;)[ (goto: &quot;asset11&quot;) ]
 
 &lt;/div&gt;
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="21" name="asset11" tags="" position="2850,200" size="100,100">&lt;div style=&quot;text-align:center;&quot;&gt;
@@ -469,9 +475,9 @@ This is yet another line.]
 
 &lt;img class=&quot;story-image bg&quot; src=&quot;./images/asset11land.png&quot; alt=&quot;background&quot; /&gt;
 
-&lt;div class=&quot;buttoneffect&quot;&gt;
+&lt;div class=&quot;hotspot&quot; style=&quot;top: 65%; left: 49%;&quot;&gt;
 |11obj&gt;[
-&lt;img class=&quot;story-image&quot; src=&quot;./images/asset11obj.png&quot; alt=&quot;button&quot; /&gt;
+&lt;img class=&quot;story-image&quot; src=&quot;./images/asset11obj.png&quot; style=&quot;width: 140%; alt=&quot;button&quot; /&gt;
 ]
 (click: ?11obj)[
 (goto: &quot;11prop&quot;)
@@ -479,7 +485,8 @@ This is yet another line.]
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="22" name="11prop" tags="" position="2975,200" size="100,100">&lt;img class=&quot;story-image Tree01&quot; src=&quot;./images/asset11obj.png&quot; alt=&quot;button&quot; /&gt;
 
 &lt;div class=&quot;typewriter&quot;&gt;
-(set: $typewriterText to &quot;Insert text&quot;)
+(set: $typewriterText to &quot;Everyone but you seem so well spoken and articulate. Everyone else’s writing seems perfect, far exceeding my own capabilities. You’ll look at your peers, and awe at their confidence, their competency, their voice, and you’ll be below them, trying to mimic them.
+&quot;)
 (set: $charIndex to 0)
 (set: $typewriterSpeed to 0.11)
 
@@ -493,7 +500,7 @@ This is yet another line.]
   ]
 ]
 
-(link: &quot;Inspect&quot;)[ (goto: &quot;asset9&quot;) ]
+(link: &quot;Throw away&quot;)[ (goto: &quot;asset9&quot;) ]
 
 &lt;/div&gt;
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="23" name="asset9" tags="" position="3100,200" size="100,100">&lt;div style=&quot;text-align:center;&quot;&gt;
@@ -502,9 +509,9 @@ This is yet another line.]
 
 &lt;img class=&quot;story-image bg&quot; src=&quot;./images/asset9land.png&quot; alt=&quot;background&quot; /&gt;
 
-&lt;div class=&quot;buttoneffect&quot;&gt;
+&lt;div class=&quot;hotspot&quot; style=&quot;top: 54%; left: 72%;&quot;&gt;
 |9obj&gt;[
-&lt;img class=&quot;story-image&quot; src=&quot;./images/asset9obj.png&quot; alt=&quot;button&quot; /&gt;
+&lt;img class=&quot;story-image&quot; src=&quot;./images/asset9obj.png&quot; style=&quot;width: 120%; alt=&quot;button&quot; /&gt;
 ]
 (click: ?9obj)[
 (goto: &quot;9prop&quot;)
@@ -512,7 +519,7 @@ This is yet another line.]
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="24" name="9prop" tags="" position="3225,200" size="100,100">&lt;img class=&quot;story-image Tree01&quot; src=&quot;./images/asset9obj.png&quot; alt=&quot;button&quot; /&gt;
 
 &lt;div class=&quot;typewriter&quot;&gt;
-(set: $typewriterText to &quot;Insert text&quot;)
+(set: $typewriterText to &quot;You’ll feel overwhelmed. You’ll feel your grades are not meeting your expectations, each thought of doubt pushing against your ability to work and focus, you’ll feel anxiety with each deadline approaching. You’ll come to overthink and panic over each task or instruction, fearing that you’ll do it wrong, or misunderstand what you’re actually supposed to do. However, one day, it’ll stop clawing at you, merely because you felt it every other day. &quot;)
 (set: $charIndex to 0)
 (set: $typewriterSpeed to 0.11)
 
@@ -526,10 +533,62 @@ This is yet another line.]
   ]
 ]
 
-(link: &quot;Inspect&quot;)[ (goto: &quot;asset6&quot;) ]
+(link: &quot;Inspect&quot;)[ (goto: &quot;asset7&quot;) ]
 
 &lt;/div&gt;
-&lt;/div&gt;</tw-passagedata></tw-storydata>
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="25" name="asset7" tags="" position="3400,300" size="100,100">&lt;div style=&quot;text-align:center;&quot;&gt;
+
+&lt;div class=&quot;scene&quot;&gt;
+
+&lt;img class=&quot;story-image bg&quot; src=&quot;./images/asset7.png&quot; alt=&quot;background&quot; /&gt;
+
+&lt;div class=&quot;typewriter&quot; style=&quot;margin-top: -350px;&quot;&gt;
+&lt;div class=&quot;typewriter&quot; style=&quot; style=&quot;top: 17%; left: 50%;&quot;&gt;
+(set: $typewriterText to &quot;You’ll know it’s not a good feeling to have, or lack. You’ll still fear the future, you’ll fear if it’s still even possible to get there through the imposter masquerading as you. Despite that, you’ll still try to hold on to hope. You’ll hope to offer something to the world and not be part of the housing crisis the news speaks of.
+&quot;) 
+(set: $charIndex to 0)
+(set: $typewriterSpeed to 0.11)
+
+
+
+(live: $typewriterSpeed)[
+  (if: $charIndex &lt; $typewriterText&#39;s length)[
+    (set: $charIndex to $charIndex + 1)
+    (print: (substring: $typewriterText, 1, $charIndex))
+    (if: $charIndex is $typewriterText&#39;s length)[
+      (stop:)
+
+(link: &quot;Walk Home&quot;)[ (goto: &quot;Titlemain&quot;) ]
+    ]
+  ]
+]
+
+</tw-passagedata><tw-passagedata pid="26" name="Untitled Passage" tags="" position="800,700" size="100,100">An Imposter
+
+(click-append: &quot;Imposter&quot;)[
+
+A person who doesn’t belong.
+]
+
+(click-append: &quot;belong.&quot;)[
+
+You will deceive yourself into thinking you are capable.
+]
+
+(click-append: &quot;capable.&quot;)[
+
+You will come to doubt yourself more with each setback.
+]
+
+(click-append: &quot;setback.&quot;)[
+
+and it’ll numb.
+]
+
+(click-append: &quot;numb.&quot;)[
+
+(link: &quot;That&#39;s me&quot;)[(goto: &quot;Fine01&quot;)]
+]</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
